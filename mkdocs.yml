@@ -1,0 +1,8 @@
+site_name: scaffolder-demo
+site_description: scaffolder-demo
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core

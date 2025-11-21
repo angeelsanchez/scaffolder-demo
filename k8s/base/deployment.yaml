@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scaffolder-demo
+  labels:
+    app: scaffolder-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scaffolder-demo
+  template:
+    metadata:
+      labels:
+        app: scaffolder-demo
+    spec:
+      containers:
+        - name: scaffolder-demo
+          image: ghcr.io/angeelsanchez/scaffolder-demo:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: PORT
+              value: "3000"
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 5

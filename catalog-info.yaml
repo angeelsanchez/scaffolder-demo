@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: scaffolder-demo
+  description: scaffolder-demo
+  annotations:
+    github.com/project-slug: angeelsanchez/scaffolder-demo
+    backstage.io/techdocs-ref: dir:.
+    argocd/app-name: scaffolder-demo
+  tags:
+    - nodejs
+    - kubernetes
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guests
