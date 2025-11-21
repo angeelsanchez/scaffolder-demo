@@ -7,6 +7,10 @@ metadata:
     github.com/project-slug: angeelsanchez/scaffolder-demo
     backstage.io/techdocs-ref: dir:.
     argocd/app-name: scaffolder-demo
+    argocd/app-namespace: argocd
+    backstage.io/kubernetes-id: scaffolder-demo
+    backstage.io/kubernetes-namespace: demo-apps
+    backstage.io/kubernetes-label-selector: app=scaffolder-demo
   tags:
     - nodejs
     - kubernetes
