@@ -11,7 +11,7 @@ metadata:
     backstage.io/kubernetes-id: scaffolder-demo
     backstage.io/kubernetes-namespace: demo-apps
     backstage.io/kubernetes-label-selector: app=scaffolder-demo
-    quay.io/repository-slug: redhat-community-of-practice/backstage-ptc
+    quay.io/repository-slug: argoproj/argocd
   tags:
     - nodejs
     - kubernetes
